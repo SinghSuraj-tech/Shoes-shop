@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KICKS | Premium Sneakers</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="logo">KICKS<span>.</span></div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="return-policy.html">Return Policy</a>
+    </div>
+<!-- ADMIN LOGIN LINK -->
+    <a href="admin login.html" class="admin-btn">Admin</a>
+</div>
+
+    <!-- SEARCH -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search sneakers..." onkeyup="filterProducts()">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <!-- CART -->
+    <div class="cart-icon" onclick="toggleCart()">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="cart-count">0</span>
+    </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>UNLEASH <span class="highlight">SPEED</span></h1>
+        <p>Premium sneakers for street, sport & style</p>
+        <button class="hero-btn">Shop Now</button>
+    </div>
+</section>
+
+<!-- ================= SHOP SECTION ================= -->
+<main class="shop-container">
+    <h2 class="section-title">Latest Collection</h2>
+
+    <div class="product-grid" id="product-grid">
+        <!-- Products loaded from script.js -->
+    </div>
+</main>
+
+<!-- ================= CART SIDEBAR ================= -->
+<div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <i class="fas fa-times close-btn" onclick="toggleCart()"></i>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="checkout-form">
+        <h3>Delivery Details</h3>
+        <input type="text" id="custName" placeholder="Full Name">
+        <input type="text" id="custPhone" placeholder="Phone Number">
+        <input type="text" id="custAddress" placeholder="Full Address">
+    </div>
+
+    <div class="cart-footer">
+        <div class="total-row">
+            Total: ₹<span id="total-price">0</span>
+        </div>
+
+        <button class="whatsapp-btn" onclick="checkoutWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 KICKS Sneakers. All Rights Reserved.</p>
+</footer>
+
+
+
+<script src="script.js"></script>
+
+<div class="product-grid" id="product-grid"></div>
+
+
+
+
+
+
+<!-- ORDER MODAL -->
+<div id="orderModal" class="order-modal">
+  <div class="order-box">
+
+    <span class="close-btn" onclick="closeModal()">×</span>
+
+    <h2>🛒 Complete Your Order</h2>
+
+    <div class="product-summary">
+      <h3 id="orderProductName"></h3>
+      <p id="orderProductPrice"></p>
+      <p id="orderProductDesc"></p>
+    </div>
+
+    <div class="order-form">
+      <input type="text" id="cname" placeholder="👤 Your Full Name">
+      <input type="tel" id="cphone" placeholder="📞 Mobile Number">
+
+      <select id="csize">
+        <option value="">📏 Select Shoe Size</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+      </select>
+
+      <textarea id="caddress" placeholder="🏠 Full Delivery Address"></textarea>
+
+      <button class="order-btn" onclick="placeOrder()">
+        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+
+<h2>🛍️ All Products</h2>
+<div id="adminProducts"></div>
+
+</body>
+</html>
+

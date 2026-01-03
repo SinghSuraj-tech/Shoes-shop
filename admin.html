@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Add Product</h2>
+<input id="pname" placeholder="Product Name">
+<input id="pprice" placeholder="Price">
+<input id="pimage" placeholder="Image URL">
+<input id="pdesc" placeholder="Description">
+<button onclick="addProduct()">Add Product</button>
+
+<h2>All Products</h2>
+<div id="productList"></div>
+
+<h2>Orders</h2>
+<div id="orders"></div>
+
+<h2>Change Password</h2>
+<input id="newPass" placeholder="New Password">
+<button onclick="changePassword()">Change</button>
+
+<button onclick="logout()">Logout</button>
+
+<script src="script.js"></script>
+</body>
+</html>
